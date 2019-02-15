@@ -28,6 +28,7 @@ private:
 public:
 	static MusicManager* GetInstance();
 	MusicManager();
+	~MusicManager();
 	void playSound(std::string name);
 	void playMusic(std::string name);
 	void pauseMusic(std::string name);

@@ -60,6 +60,19 @@ MusicManager::MusicManager()
 	updateVolume();
 }
 
+MusicManager::~MusicManager()
+{
+	for(auto& sound : sounds)
+	{
+		delete(sound.second);
+	}
+
+	for(auto& m : music)
+	{
+		delete(m.second);
+	}
+}
+
 void MusicManager::playSound(std::string name)
 {
 	if (!sounds.count(name))
